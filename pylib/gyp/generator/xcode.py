@@ -785,7 +785,7 @@ def GenerateOutput(target_list, target_dicts, data, params):
     # The Xcode "issues" don't affect xcode-ninja builds, since the dependency
     # logic all happens in ninja.  Don't bother creating the extra targets in
     # that case.
-    if type != 'none' and (spec_actions or spec_rules) and not ninja_wrapper:
+    if False and type != 'none' and (spec_actions or spec_rules) and not ninja_wrapper:
       support_xccl = CreateXCConfigurationList(configuration_names);
       support_target_suffix = generator_flags.get(
           'support_target_suffix', ' Support')
